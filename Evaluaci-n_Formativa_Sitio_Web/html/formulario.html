@@ -88,16 +88,19 @@
 
 <h3>Informacion academica</h3>
 <br><br>
-<div class="form-floating">
-  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-    <option selected>...</option>
-    <option value="1">Enseñanza media</option>
-    <option value="2">Título profesional</option>
-    <option value="3">Tecnico</option>
-    <option value="4">Otro</option>
-  </select>
-  <label for="floatingSelect">Nivel educacional</label>
-</div>
+<label>
+  <input type="radio" name="nivel_educacional" value="1"> Enseñanza media
+</label>
+<label>
+  <input type="radio" name="nivel_educacional" value="2"> Título profesional
+</label>
+<label>
+  <input type="radio" name="nivel_educacional" value="3"> Tecnico
+</label>
+<label>
+  <input type="radio" name="nivel_educacional" value="4"> Otro
+</label>
+
 <br><br>
 <div class="form-floating">
   <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
@@ -114,21 +117,33 @@
     <option value="10">Tecnico en construccion</option>
     <option value="11">Tecnico en electricidad industrial</option>
     <option value="12">Tecnico en electronica</option>
-  </select>
+  </select> 
   <label for="floatingSelect">Carrera de interes</label>
+
+    
+  
+  
+</div>
   <br><br>
   <br   ><br>
   <h4>Areas de interes</h4>
   <br><br>
-  <div class="form-floating">
-  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-    <option selected>...</option>
-    <option value="1">Tecnologia</option>
-    <option value="2">Salud</option>
-    <option value="3">Educacion</option>
-    <option value="4">Administracion</option>
-    <option value="5">Diseño</option>
-    <option value="6">Otra</option>
-  </select>
-  <label for="floatingSelect">Puede seleccionar multiples opciones</label>
-</div>
+  <label for="floatingSelect">Puede seleccionar varias opciones:</label>
+  <label>
+    <input type="checkbox" name="interes" value="1"> Tecnologia
+  </label>
+  <label>
+    <input type="checkbox" name="interes" value="2"> Salud
+  </label>
+  <label>
+    <input type="checkbox" name="interes" value="3"> Eduacion
+  </label>
+  <label>
+    <input type="checkbox" name="interes" value="4"> Administracion
+    </label>
+    <label>
+      <input type="checkbox" name="interes" value="5"> Diseño
+    </label>
+    <label>
+      <input type="checkbox" name="interes" value="6"> Otra
+    </label>

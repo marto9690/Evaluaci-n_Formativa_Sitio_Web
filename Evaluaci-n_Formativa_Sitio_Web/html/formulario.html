@@ -147,3 +147,18 @@
     <label>
       <input type="checkbox" name="interes" value="6"> Otra
     </label>
+<br><br>
+  
+<h5>Comentarios u observaciones</h5>
+<br><br>
+<div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <label for="floatingTextarea2">Comentarios u observaciones</label>
+</div>
+<br><br>
+<h6>Subir curriculum (opcional)</h6>
+<form action="subir.php" method="POST" enctype="multipart/form-data">
+    <label for="archivo">Elige un archivo:</label>
+    <input type="file" id="archivo" name="mi_archivo">
+    <button type="submit">Subir archivo</button>
+</form>

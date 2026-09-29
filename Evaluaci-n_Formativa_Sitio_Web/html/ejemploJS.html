@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de JS</title>
+    <script>
+        function encenderAmpolleta() {
+            document.getElementById("imgEncendida").src = "../img/encendida.jpg";
+
+        }
+function apagarAmpolleta() {
+            document.getElementById("imgEncendida").src = "../img/apagada.jpg";
+        }
+      
+
+    </script>
+
+</head>
+<body>
+    <h1 style="text-align: center;">Ejemplo de JavaScript</h1>
+    <div style="text-align: center;">
+    
+    <img id="imgEncendida" style="align-items: center;" src="../img/encendida.jpg" alt="Imagen encendida">
+    </div>
+    <div style="text-align: center;">
+    <button onclick="encenderAmpolleta()">Encender ampolleta</button>
+    <button onclick="apagarAmpolleta()">Apagar ampolleta</button>
+    </div>
+</body>
+</html>

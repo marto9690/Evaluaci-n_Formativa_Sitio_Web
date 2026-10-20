@@ -4,34 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="icon" href="../img/Universidad-de-los-Lagos.png" type="image/x-icon">
-
     <title>Formulario de Inscripción</title>
-
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
- <nav>
-        <ul>
 
-            
-            <li><a href="../index.html">Inicio</a></li>
-             <li><a href="acerca_de.html">Acerca de</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-             <li><a href="contacto.html">Contacto</a></li>
-           <li><a href="calculadora.html">Calculadora</a></li>
-           <li><a href="ejemploJS.html">Ampolleta</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="acerca_de.html">Acerca de</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="ejemploJS.html">Ampolleta</a></li>
+    </ul>
+</nav>
+
 <body>
 
     <main class="contenedor">
 
-        <!-- ENCABEZADO -->
         <header class="encabezado">
             <div>
                 <h1>🎓 Formulario de Inscripción</h1>
@@ -39,116 +33,51 @@
             </div>
         </header>
 
-
-        <!-- IMAGEN PRINCIPAL -->
         <div class="banner">
             <div class="mensaje-banner">
                 <span>“Tu futuro comienza<br>con un solo paso”</span>
             </div>
         </div>
 
-
-        <!-- FORMULARIO -->
         <form action="" method="get" class="formulario">
 
-            <!-- =========================
-                 DATOS PERSONALES
-            ========================== -->
-
             <section class="seccion">
-
                 <h2>👤 Datos personales</h2>
 
                 <div class="fila">
-
                     <div class="campo">
-                        <label for="nombre">
-                            Nombre <span>*</span>
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nombre"
-                            name="nombre"
-                            placeholder="Ingrese su nombre"
-                            required>
+                        <label for="nombre">Nombre <span>*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
                     </div>
 
-
                     <div class="campo">
-                        <label for="apellido">
-                            Apellido <span>*</span>
-                        </label>
-
-                        <input
-                            type="text"
-                            id="apellido"
-                            name="apellido"
-                            placeholder="Ingrese su apellido"
-                            required>
+                        <label for="apellido">Apellido <span>*</span></label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
                     </div>
-
                 </div>
 
-
                 <div class="fila">
-
                     <div class="campo">
-                        <label for="correo">
-                            Correo electrónico <span>*</span>
-                        </label>
-
-                        <input
-                            type="email"
-                            id="correo"
-                            name="correo"
-                            placeholder="ejemplo@correo.cl"
-                            required>
+                        <label for="correo">Correo electrónico <span>*</span></label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.cl" required>
                     </div>
 
-
                     <div class="campo">
-                        <label for="telefono">
-                            Teléfono <span>*</span>
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="telefono"
-                            name="telefono"
-                            placeholder="+56 9 1234 5678"
-                            required>
+                        <label for="telefono">Teléfono <span>*</span></label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" required>
                     </div>
-
                 </div>
 
-
                 <div class="fila">
-
                     <div class="campo">
-                        <label for="fecha">
-                            Fecha de nacimiento <span>*</span>
-                        </label>
-
-                        <input
-                            type="date"
-                            id="fecha"
-                            name="fecha_nacimiento"
-                            required>
+                        <label for="fecha">Fecha de nacimiento <span>*</span></label>
+                        <input type="date" id="fecha" name="fecha_nacimiento" required>
                     </div>
 
-
                     <div class="campo">
-                        <label for="region">
-                            Región <span>*</span>
-                        </label>
-
+                        <label for="region">Región <span>*</span></label>
                         <select id="region" name="region" required>
-
-                            <option value="" selected disabled>
-                                Seleccione una región
-                            </option>
-
+                            <option value="" selected disabled>Seleccione una región</option>
                             <option>Arica y Parinacota</option>
                             <option>Tarapacá</option>
                             <option>Antofagasta</option>
@@ -165,83 +94,29 @@
                             <option>Los Lagos</option>
                             <option>Aysén</option>
                             <option>Magallanes</option>
-
                         </select>
                     </div>
-
                 </div>
-
             </section>
 
-
-            <!-- =========================
-                 INFORMACIÓN ACADÉMICA
-            ========================== -->
-
             <section class="seccion">
-
                 <h2>🎓 Información académica</h2>
 
                 <div class="fila">
-
                     <div class="campo">
-
-                        <label>
-                            Nivel educacional <span>*</span>
-                        </label>
-
+                        <label>Nivel educacional <span>*</span></label>
                         <div class="opciones">
-
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="nivel_educacional"
-                                    value="Enseñanza Media"
-                                    required>
-                                Enseñanza Media
-                            </label>
-
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="nivel_educacional"
-                                    value="Técnico">
-                                Técnico
-                            </label>
-
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="nivel_educacional"
-                                    value="Universitario">
-                                Universitario
-                            </label>
-
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="nivel_educacional"
-                                    value="Otro">
-                                Otro
-                            </label>
-
+                            <label><input type="radio" name="nivel_educacional" value="Enseñanza Media" required> Enseñanza Media</label>
+                            <label><input type="radio" name="nivel_educacional" value="Técnico"> Técnico</label>
+                            <label><input type="radio" name="nivel_educacional" value="Universitario"> Universitario</label>
+                            <label><input type="radio" name="nivel_educacional" value="Otro"> Otro</label>
                         </div>
-
                     </div>
 
-
                     <div class="campo">
-
-                        <label for="carrera">
-                            Carrera de interés <span>*</span>
-                        </label>
-
+                        <label for="carrera">Carrera de interés <span>*</span></label>
                         <select id="carrera" name="carrera" required>
-
-                            <option value="" selected disabled>
-                                Seleccione una carrera
-                            </option>
-
+                            <option value="" selected disabled>Seleccione una carrera</option>
                             <option>Técnico en Informática</option>
                             <option>Técnico en Mecánica</option>
                             <option>Técnico en Electricidad</option>
@@ -253,149 +128,58 @@
                             <option>Técnico en Diseño Gráfico</option>
                             <option>Técnico en Construcción</option>
                             <option>Técnico en Electrónica</option>
-
                         </select>
-
                     </div>
-
                 </div>
-
             </section>
 
-
-            <!-- =========================
-                 ÁREAS DE INTERÉS
-            ========================== -->
-
             <section class="seccion">
-
-                <h2>☷ Áreas de interés
-                    <small>(puedes seleccionar varias)</small>
-                </h2>
-
+                <h2>☷ Áreas de interés <small>(puedes seleccionar varias)</small></h2>
                 <div class="intereses">
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            name="interes"
-                            value="Tecnología">
-                        Tecnología
-                    </label>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            name="interes"
-                            value="Administración">
-                        Administración
-                    </label>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            name="interes"
-                            value="Salud">
-                        Salud
-                    </label>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            name="interes"
-                            value="Diseño">
-                        Diseño
-                    </label>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            name="interes"
-                            value="Educación">
-                        Educación
-                    </label>
-
-                    <label>
-                        <input
-                            type="checkbox"
-                            name="interes"
-                            value="Otra">
-                        Otra
-                    </label>
-
+                    <label><input type="checkbox" name="interes" value="Tecnología"> Tecnología</label>
+                    <label><input type="checkbox" name="interes" value="Administración"> Administración</label>
+                    <label><input type="checkbox" name="interes" value="Salud"> Salud</label>
+                    <label><input type="checkbox" name="interes" value="Diseño"> Diseño</label>
+                    <label><input type="checkbox" name="interes" value="Educación"> Educación</label>
+                    <label><input type="checkbox" name="interes" value="Otra"> Otra</label>
                 </div>
-
             </section>
 
-
-            <!-- =========================
-                 MENSAJE
-            ========================== -->
-
             <section class="seccion">
-
                 <h2>💬 Mensaje u observaciones</h2>
-
-                <textarea
-                    id="mensaje"
-                    name="mensaje"
-                    placeholder="Escribe aquí tu mensaje..."
-                    rows="4"></textarea>
-
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje..." rows="4"></textarea>
             </section>
-
-
-            <!-- =========================
-                 CURRÍCULUM
-            ========================== -->
 
             <section class="seccion">
-
-                <h2>📎 Adjuntar currículum
-                    <small>(opcional)</small>
-                </h2>
-
+                <h2>📎 Adjuntar currículum <small>(opcional)</small></h2>
                 <div class="archivo">
-
-                    <input
-                        type="file"
-                        id="archivo"
-                        name="curriculum"
-                        accept=".pdf,.doc,.docx">
-
-                    <p>
-                        Formatos permitidos: PDF, DOC, DOCX<br>
-                        Tamaño máximo: 5 MB
-                    </p>
-
+                    <input type="file" id="archivo" name="curriculum" accept=".pdf,.doc,.docx">
+                    <p>Formatos permitidos: PDF, DOC, DOCX<br>Tamaño máximo: 5 MB</p>
                 </div>
-
             </section>
-
-
-            <!-- =========================
-                 BOTONES
-            ========================== -->
 
             <div class="botones">
-
-                <button type="submit" class="btn-enviar">
-                    ✈ Enviar formulario
-                </button>
-
-                <button type="reset" class="btn-limpiar">
-                    🗑 Limpiar
-                </button>
-
+                <button type="submit" class="btn-enviar">✈ Enviar formulario</button>
+                <button type="reset" class="btn-limpiar">🗑 Limpiar</button>
             </div>
 
         </form>
 
     </main>
 
-</body>
- <footer>
+    <footer>
         <p>Derechos reservados &copy; 2026</p>
         <p>Martin Avilés</p>
     </footer>
+
+    <script>
+        $(document).ready(function() {
+            $(".formulario").on("submit", function(e) {
+                let nombre = $("#nombre").val();
+                console.log("Enviando formulario de: " + nombre);
+            });
+        });
+    </script>
+
+</body>
 </html>

@@ -1,0 +1,14 @@
+<ul id="lista"></ul>
+<script>
+    fetch("../json/datos.json")
+        .then(response => response.json())
+        .then(data => {
+            const lista = document.getElementById('lista');
+            data.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `Nombre: ${item.nombre}, Edad: ${item.edad}, Ciudad: ${item.ciudad}`;
+                lista.appendChild(li);
+            });
+        })
+        .catch(error => console.error('Error al cargar el archivo JSON:', error));
+</script>

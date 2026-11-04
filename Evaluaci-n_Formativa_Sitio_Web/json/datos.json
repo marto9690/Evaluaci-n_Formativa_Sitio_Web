@@ -1,5 +1,12 @@
 [
-    {"nombre": "Juan", "edad": 25, "ciudad": "Madrid"},
-    {"nombre": "María", "edad": 30, "ciudad": "Barcelona"},
-    {"nombre": "Pedro", "edad": 28, "ciudad": "Valencia"}
+    {"nombre": "Juan", "edad": 25, "ciudad": "Madrid", "correo": "juan@ejemplo.com"},
+    {"nombre": "Ana", "edad": 22, "ciudad": "Sevilla", "correo": "ana@ejemplo.com"},
+    {"nombre": "María", "edad": 30, "ciudad": "Barcelona", "correo": "maria@ejemplo.com"},
+    {"nombre": "Pedro", "edad": 28, "ciudad": "Valencia", "correo": "pedro@ejemplo.com"},
+    {"nombre": "Lucía", "edad": 27, "ciudad": "Bilbao", "correo": "lucia@ejemplo.com"},
+    {"nombre": "Carlos", "edad": 35, "ciudad": "Granada", "correo": "carlos@ejemplo.com"},
+    {"nombre": "Sofía", "edad": 24, "ciudad": "Zaragoza", "correo": "sofia@ejemplo.com"},
+    {"nombre": "Diego", "edad": 29, "ciudad": "Málaga", "correo": "diego@ejemplo.com"},
+    {"nombre": "Elena", "edad": 26, "ciudad": "Alicante", "correo": "elena@ejemplo.com"},
+    {"nombre": "Miguel", "edad": 31, "ciudad": "Córdoba", "correo": "miguel@ejemplo.com"}
 ]

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Google Sheet</title>
+    </head>
+    <body>
+       <h1>Datos desde Google Sheet</h1>
+        <ul id="lista"></ul>
+
+        <script>
+            fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRTEQegrPfjmTGF6t_kZ9xj6PVRRE7wq-4t-eNTXrOIpmlke1jHwELf9wYv5cObT1KvxxfzNHEwogsb/pub?output=csv')
+                .then(response => response.text())
+                .then(data => {
+                    const rows = data.split('\n').slice(1); // Omitir la primera fila (encabezados)
+                    const lista = document.getElementById('lista');
+                    rows.forEach(row => {
+                        const columns = row.split(',');
+                        const li = document.createElement('li');
+                        li.textContent = `Nombre: ${columns[0]}, Edad: ${columns[1]} , Correo: ${columns[2]}`;
+                        lista.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Error al cargar los datos desde Google Sheet:', error));
+              
+        </script>
+    </body>
+</html>

@@ -1,56 +1,366 @@
-<html>
-    <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/Universidad-de-los-Lagos.png" type="image/x-icon">
-    <title></title>
-   
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> <link rel="stylesheet" href="../css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
-    <header >
 
-        <h1>¡Mi primera pagina!</h1>
+    <title>Gestión de Datos</title>
+
+    <link rel="icon" href="../img/Universidad-de-los-Lagos.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: #f2f5fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #333;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            background: linear-gradient(135deg, #102c54, #1c477d);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            margin: 0;
+            color: #dce6f5;
+        }
+
+        /* NAVEGACIÓN */
+
+        nav {
+            background-color: white;
+            padding: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #294568;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0d6efd;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1100px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .titulo-seccion {
+            margin-bottom: 25px;
+        }
+
+        .titulo-seccion h2 {
+            font-weight: bold;
+            color: #19385f;
+        }
+
+        .titulo-seccion p {
+            color: #777;
+        }
+
+        /* TARJETA */
+
+        .contenedor-datos {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .contenedor-datos h3 {
+            font-size: 21px;
+            color: #19385f;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* TABLA */
+
+        .table {
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+
+        .table thead {
+            background-color: #19385f;
+            color: white;
+        }
+
+        .table thead th {
+            background-color: #19385f;
+            color: white;
+            padding: 15px;
+        }
+
+        .table tbody td {
+            padding: 14px;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f0f5fc;
+        }
+
+        /* ESTADOS */
+
+        #mensaje {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            background-color: #102c54;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 70px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #dce6f5;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .contenedor-datos {
+                padding: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h1>Gestión de Datos</h1>
+
+        <p>Visualización de información mediante Google Sheets</p>
+
     </header>
-     <nav>
+
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+
+    <nav>
+
         <ul>
 
-            
             <li><a href="../index.html">Inicio</a></li>
-             <li><a href="acerca_de.html">Acerca de</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-             <li><a href="formulario.html">Formulario</a></li>
-             <li><a href="calculadora.html">Calculadora</a></li>
-             <li><a href="ejemploJS.html">Ampolleta</a></li>
-               <li><a href="json.html">JSON</a></li>
-           
-        </ul>
-    </nav>
-    <head>
-        <title>Google Sheet</title>
-    </head>
-    <body>
-       <h1>Datos desde Google Sheet</h1>
-        <ul id="lista"></ul>
 
-        <script>
-            fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRTEQegrPfjmTGF6t_kZ9xj6PVRRE7wq-4t-eNTXrOIpmlke1jHwELf9wYv5cObT1KvxxfzNHEwogsb/pub?output=csv')
-                .then(response => response.text())
-                .then(data => {
-                    const rows = data.split('\n').slice(1); // Omitir la primera fila (encabezados)
-                    const lista = document.getElementById('lista');
-                    rows.forEach(row => {
-                        const columns = row.split(',');
-                        const li = document.createElement('li');
-                        li.textContent = `Nombre: ${columns[0]}, Edad: ${columns[1]} , Correo: ${columns[2]}`;
-                        lista.appendChild(li);
+            <li><a href="acerca_de.html">Acerca de</a></li>
+
+            <li><a href="contacto.html">Contacto</a></li>
+
+            <li><a href="formulario.html">Formulario</a></li>
+
+            <li><a href="calculadora.html">Calculadora</a></li>
+
+            <li><a href="ejemploJS.html">Ampolleta</a></li>
+
+            <li><a href="json.html">JSON</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <div class="titulo-seccion">
+
+            <h2>Registro de personas</h2>
+
+            <p>Consulta la información almacenada en nuestra hoja de cálculo.</p>
+
+        </div>
+
+
+        <!-- TARJETA DE DATOS -->
+
+        <div class="contenedor-datos">
+
+            <h3>📋 Información registrada</h3>
+
+            <div class="table-responsive">
+
+                <table class="table table-hover">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Nombre</th>
+
+                            <th>Edad</th>
+
+                            <th>Correo electrónico</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="lista">
+
+                        <tr>
+
+                            <td colspan="3" id="mensaje">
+                                Cargando información...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>Proyecto académico | Gestión de información con Google Sheets</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const URL_SHEET = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRTEQegrPfjmTGF6t_kZ9xj6PVRRE7wq-4t-eNTXrOIpmlke1jHwELf9wYv5cObT1KvxxfzNHEwogsb/pub?output=csv';
+
+        const lista = document.getElementById('lista');
+
+        fetch(URL_SHEET)
+
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error('No se pudieron obtener los datos');
+                }
+
+                return response.text();
+
+            })
+
+            .then(data => {
+
+                const rows = data.trim().split(/\r?\n/).slice(1);
+
+                lista.innerHTML = '';
+
+                if (rows.length === 0 || !rows[0]) {
+
+                    lista.innerHTML = `
+                        <tr>
+                            <td colspan="3" class="text-center">
+                                No hay registros disponibles.
+                            </td>
+                        </tr>
+                    `;
+
+                    return;
+
+                }
+
+                rows.forEach(row => {
+
+                    const columns = row.split(',');
+
+                    if (columns.length < 3) return;
+
+                    const tr = document.createElement('tr');
+
+                    [0, 1, 2].forEach(index => {
+
+                        const td = document.createElement('td');
+
+                        td.textContent = columns[index].replace(/^"|"$/g, '').trim();
+
+                        tr.appendChild(td);
+
                     });
-                })
-                .catch(error => console.error('Error al cargar los datos desde Google Sheet:', error));
-              
-        </script>
-    </body>
+
+                    lista.appendChild(tr);
+
+                });
+
+            })
+
+            .catch(error => {
+
+                console.error('Error:', error);
+
+                lista.innerHTML = `
+                    <tr>
+                        <td colspan="3" class="text-center text-danger">
+                            Error al cargar los datos de Google Sheets.
+                        </td>
+                    </tr>
+                `;
+
+            });
+
+    </script>
+
+</body>
+
 </html>

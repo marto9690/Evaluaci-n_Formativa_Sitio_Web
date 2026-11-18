@@ -1,27 +1,66 @@
+<h2>Lista de tareas</h2>
+
 <input id="tarea" placeholder="Escribe una tarea">
 <button onclick="guardar()">Guardar</button>
+
 <ul id="lista"></ul>
 
 <script>
+    let tareas = JSON.parse(localStorage.getItem('tareas')) || [];
+
     function guardar() {
-        const tarea = document.getElementById('tarea').value;
-        if (tarea) {
-            let tareas = JSON.parse(localStorage.getItem('tareas')) || [];
+        const tarea = document.getElementById('tarea').value.trim();
+
+        if (tarea !== '') {
             tareas.push(tarea);
-            localStorage.setItem('tareas', JSON.stringify(tareas));
-            mostrarTareas();
+            actualizar();
             document.getElementById('tarea').value = '';
         }
     }
 
     function mostrarTareas() {
-        const tareas = JSON.parse(localStorage.getItem('tareas')) || [];
         const lista = document.getElementById('lista');
         lista.innerHTML = '';
-        tareas.forEach(tarea => {
+
+        tareas.forEach((tarea, index) => {
             const li = document.createElement('li');
-            li.textContent = tarea;
+
+            li.textContent = tarea + ' ';
+
+            // Botón editar
+            const editar = document.createElement('button');
+            editar.textContent = 'Editar';
+
+            editar.onclick = function() {
+                const nuevaTarea = prompt('Editar tarea:', tareas[index]);
+
+                if (nuevaTarea !== null && nuevaTarea.trim() !== '') {
+                    tareas[index] = nuevaTarea.trim();
+                    actualizar();
+                }
+            };
+
+            // Botón eliminar
+            const eliminar = document.createElement('button');
+            eliminar.textContent = 'Eliminar';
+
+            eliminar.onclick = function() {
+                tareas.splice(index, 1);
+                actualizar();
+            };
+
+            li.appendChild(editar);
+            li.appendChild(eliminar);
+
             lista.appendChild(li);
         });
     }
+
+    function actualizar() {
+        localStorage.setItem('tareas', JSON.stringify(tareas));
+        mostrarTareas();
+    }
+
+    // Mostrar tareas al cargar la página
+    mostrarTareas();
 </script>
